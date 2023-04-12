@@ -34,6 +34,7 @@ class ScreenHome extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             CircPercent(),
+            LineProgress(),
           ],
         ),
       ),
@@ -65,3 +66,18 @@ class CircPercent extends StatelessWidget {
   }
 }
 
+
+class LineProgress extends StatelessWidget {
+  const LineProgress({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return LinearProgressIndicator(
+      minHeight: 20,
+      color: Colors.green,
+      backgroundColor: Colors.green.shade100,
+    );
+  }
+}
