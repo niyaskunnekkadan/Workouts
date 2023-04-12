@@ -35,6 +35,7 @@ class ScreenHome extends StatelessWidget {
           children: [
             CircPercent(),
             LineProgress(),
+            LinePercent(),
           ],
         ),
       ),
@@ -78,6 +79,27 @@ class LineProgress extends StatelessWidget {
       minHeight: 20,
       color: Colors.green,
       backgroundColor: Colors.green.shade100,
+    );
+  }
+}
+
+
+class LinePercent extends StatelessWidget {
+  const LinePercent({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return LinearPercentIndicator(
+      percent: .4,
+      backgroundColor: Colors.purple.shade100,
+      progressColor: Colors.purple,
+      animation: true,
+      animationDuration: 1800,
+      restartAnimation: true,
+      lineHeight: 20,
+      barRadius: const Radius.circular(20),
     );
   }
 }
