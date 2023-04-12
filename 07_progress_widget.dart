@@ -36,6 +36,7 @@ class ScreenHome extends StatelessWidget {
             CircPercent(),
             LineProgress(),
             LinePercent(),
+            CircProgress(),
           ],
         ),
       ),
@@ -100,6 +101,22 @@ class LinePercent extends StatelessWidget {
       restartAnimation: true,
       lineHeight: 20,
       barRadius: const Radius.circular(20),
+    );
+  }
+}
+
+
+class CircProgress extends StatelessWidget {
+  const CircProgress({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return CircularProgressIndicator(
+      strokeWidth: 4,
+      color: Colors.green,
+      backgroundColor: Colors.green.shade100,
     );
   }
 }
